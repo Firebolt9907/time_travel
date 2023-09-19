@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "63211731056",
+    "project_id": "time-travel-b1803",
+    "storage_bucket": "time-travel-b1803.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:63211731056:android:84236bed6013d3de331cb5",
+        "android_client_info": {
+          "package_name": "com.firebolt.cringeminer.cringe_miner"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFJZj8x9fZTq4bm_1VLAhhK8DeWQ4eP6o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
