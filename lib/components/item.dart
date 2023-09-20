@@ -47,12 +47,17 @@ class _ItemWidgetState extends State<ItemWidget> {
                     duration: Duration(milliseconds: 1000 ~/ 30),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(10),
-                      child: Container(
-                        color: CupertinoColors.activeBlue,
-                        height: 40,
-                        width: (MediaQuery.of(context).size.width - 40) *
-                            (widget.timeElapsed % widget.totalTime),
-                      ),
+                      child: ValueListenableBuilder<int>(
+                          valueListenable: time,
+                          builder:
+                              (BuildContext context, int value, Widget? child) {
+                            return Container(
+                              color: CupertinoColors.activeBlue,
+                              height: 40,
+                              width: (MediaQuery.of(context).size.width - 40) *
+                                  (value % widget.totalTime),
+                            );
+                          }),
                     ),
                   )
                 ],
