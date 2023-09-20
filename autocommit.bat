@@ -1,3 +1,4 @@
+@echo off
 E:
 cd "E:\Users\rishu\OneDrive\Documents\GitHub\cringe_miner"
 git add -u
