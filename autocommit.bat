@@ -6,3 +6,4 @@ git add -u
 git commit -m "Auto Commit"
 git push origin auto-save
 timeout 60
+goto a
