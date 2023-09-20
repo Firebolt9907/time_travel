@@ -31,6 +31,8 @@ class MyApp extends StatefulWidget {
   State<MyApp> createState() => _MyAppState();
 }
 
+  ValueNotifier<double> money = ValueNotifier<double>(0);
+
 class _MyAppState extends State<MyApp> {
   var loggedIn = false;
 
