@@ -19,13 +19,15 @@ class ItemWidget extends StatefulWidget {
 }
 
 class _ItemWidgetState extends State<ItemWidget> {
+  final screenSize = MediaQuery.of(context).size;
+  
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         SizedBox(
             height: 60,
-            width: MediaQuery.of(context).size.width,
+            width: screenSize.width,
             child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                 child: ClipRRect(
