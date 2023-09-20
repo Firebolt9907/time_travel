@@ -1,3 +1,25 @@
+import 'package:cringe_miner/main.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+class ItemWidget extends StatefulWidget {
+  const ItemWidget({
+    Key? key,
+    this.timeElapsed,
+    this.totalTime,
+    this.upgradePrice,
+    this.moneyPerCycle,
+  }) : super(key: key);
+
+  final timeElapsed;
+  final totalTime;
+  final upgradePrice;
+  final moneyPerCycle;
+
+  @override
+  State<ItemWidget> createState() => _ItemWidgetState();
+}
+
 class _ItemWidgetState extends State<ItemWidget> {
   @override
   Widget build(BuildContext context) {
