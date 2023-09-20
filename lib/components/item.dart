@@ -44,7 +44,7 @@ class _ItemWidgetState extends State<ItemWidget> {
                     width: MediaQuery.of(context).size.width - 40,
                   ),
                   AnimatedSize(
-                    duration: Duration(milliseconds: 1000 ~/ 60),
+                    duration: Duration(milliseconds: 1000 ~/ 30),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(10),
                       child: Container(

@@ -21,8 +21,6 @@ class _HomePageState extends State<HomePage> {
     super.initState();
   }
 
-
-
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
@@ -43,7 +41,7 @@ class _HomePageState extends State<HomePage> {
           ),
           ItemWidget(
             totalTime: 2000,
-            timeElapsed: 600,
+            timeElapsed: 100,
           ),
         ],
       ),
