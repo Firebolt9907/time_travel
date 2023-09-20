@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:cringe_miner/components/item.dart';
 import 'package:cringe_miner/setup.dart';
 import 'package:flutter/cupertino.dart';
@@ -11,6 +13,16 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  Timer? timer;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
+
+
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
