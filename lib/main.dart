@@ -31,7 +31,9 @@ class MyApp extends StatefulWidget {
   State<MyApp> createState() => _MyAppState();
 }
 
-  ValueNotifier<double> money = ValueNotifier<double>(DateTime.now().);
+  ValueNotifier<double> money = ValueNotifier<double>(0);
+  ValueNotifier<int> time = ValueNotifier<int>(
+  ValueNotifier<double> money = ValueNotifier<double>(0);); //measured in frames NOT SECONDS OR MS
 
 class _MyAppState extends State<MyApp> {
   var loggedIn = false;
