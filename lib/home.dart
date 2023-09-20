@@ -20,9 +20,9 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     // TODO: implement initState
     timer = Timer.periodic(
-        Duration(microseconds: 16666),
+        Duration(milliseconds: 16),
         (Timer t) => () {
-              time.value += 1;
+              // time.value += 1;
               print('changed time');
             });
     super.initState();
