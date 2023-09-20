@@ -44,8 +44,9 @@ class _ItemWidgetState extends State<ItemWidget> {
                             borderRadius: BorderRadius.circular(10),
                             child: Container(
                                 color: CupertinoColors.activeBlue,
-                                height: 40,Auto Commit
-                                width: (MediaQuery.of(context).size.width - 40) *
+                                height: 40,
+                                width: (MediaQuery.of(context).size.width -
+                                        40) *
                                     (widget.timeElapsed / widget.totalTime))),
                       )
                     ],
