@@ -51,7 +51,7 @@ class _ItemWidgetState extends State<ItemWidget> {
                         color: CupertinoColors.activeBlue,
                         height: 40,
                         width: (MediaQuery.of(context).size.width - 40) *
-                            (widget.timeElapsed / widget.totalTime),
+                            (widget.timeElapsed % widget.totalTime),
                       ),
                     ),
                   )

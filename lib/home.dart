@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:cringe_miner/components/item.dart';
+import 'package:cringe_miner/main.dart';
 import 'package:cringe_miner/setup.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
@@ -18,8 +19,8 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     // TODO: implement initState
-    timer =
-        Timer.periodic(Duration(microseconds: 16666), (Timer t) => );
+    timer = Timer.periodic(
+        Duration(microseconds: 16666), (Timer t) => time.value++);
     super.initState();
   }
 
