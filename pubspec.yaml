@@ -25,4 +25,5 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-  main: lib/main.dart
+
+main: lib/main.dart
