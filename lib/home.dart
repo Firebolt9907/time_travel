@@ -14,19 +14,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  Timer? timer;
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    timer = Timer.periodic(
-        Duration(milliseconds: 16),
-        (Timer t) => () {
-              // time.value += 1;
-              print('changed time');
-            });
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
