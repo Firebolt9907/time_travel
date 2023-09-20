@@ -44,7 +44,6 @@ class _HomePageState extends State<HomePage> {
           ),
           ItemWidget(
             totalTime: 2000,
-            timeElapsed: 100,
           ),
         ],
       ),
