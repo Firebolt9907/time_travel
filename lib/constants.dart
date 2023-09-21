@@ -1,3 +1,5 @@
 Map<String, List<Map<String, dynamic>>> items = {
-  'ancientEgypt': []
+  'ancientEgypt': [
+    {'name': 'Sand', 'totalTime': 200, 'totalTimeInSeconds': }
+  ]
 };
