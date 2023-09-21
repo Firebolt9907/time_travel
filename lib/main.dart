@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:cringe_miner/home.dart';
 import 'package:cringe_miner/setup.dart';
 import 'package:dynamic_color/dynamic_color.dart';
@@ -39,10 +41,17 @@ ValueNotifier<int> time = ValueNotifier<int>(
 class _MyAppState extends State<MyApp> {
   var loggedIn = false;
 
+  Timer? timer;
+
   @override
   void initState() {
     // TODO: implement initState
-
+    timer = Timer.periodic(
+        Duration(seconds: 1),
+        (Timer t) => () {
+              // time.value += 1;
+              print('time: ');
+            });
     super.initState();
   }
 
