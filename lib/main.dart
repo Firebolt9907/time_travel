@@ -47,13 +47,13 @@ class _MyAppState extends State<MyApp> {
     time.value = (DateTime.now().millisecondsSinceEpoch ~/ 1000) * 60;
     print('time: ' + time.value.toString());
     // TODO: implement initState
-    timer = Timer.periodic(Duration(seconds: 1), (Timer t) => addTime());
+    timer =
+        Timer.periodic(Duration(microseconds: 16666), (Timer t) => addTime());
     super.initState();
   }
 
   addTime() {
     time.value += 1;
-    print('time: ' + time.value.toString());
   }
 
   @override
