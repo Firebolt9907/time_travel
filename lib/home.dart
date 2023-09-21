@@ -19,6 +19,8 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       // extendBodyBehindAppBar: true,
+      backgroundColor:
+          context.isDarkMode ? CupertinoColors.black : CupertinoColors.white,
       child: ListView(
         children: [
           Center(
