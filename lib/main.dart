@@ -44,7 +44,7 @@ class _MyAppState extends State<MyApp> {
 
   @override
   void initState() {
-    time.value = DateTime.now().millisecondsSinceEpoch * (60 ~/ 1000);
+    time.value = (DateTime.now().millisecondsSinceEpoch ~/ 1000) * 60;
     print('time: ' + time.value.toString());
     // TODO: implement initState
     timer = Timer.periodic(
