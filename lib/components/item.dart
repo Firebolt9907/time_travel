@@ -5,10 +5,7 @@ import 'package:flutter/material.dart';
 class ItemWidget extends StatefulWidget {
   const ItemWidget({
     Key? key,
-    this.timeElapsed,
     this.totalTime,
-    this.upgradePrice,
-    this.moneyPerCycle,
   }) : super(key: key);
 
   final totalTime;
