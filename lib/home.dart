@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:cringe_miner/components/item.dart';
 import 'package:cringe_miner/main.dart';
 import 'package:cringe_miner/setup.dart';
+import 'package:cringe_miner/upgrade.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
@@ -38,7 +39,10 @@ class _HomePageState extends State<HomePage> {
           Bounceable(
             onTap: () => CupertinoScaffold.showCupertinoModalBottomSheet(
               context: context,
-              builder: (context) => SetupPage(),
+              builder: (context) => UpgradePage(
+                totalTime: 200,
+                item: 1,
+              ),
             ),
             child: ItemWidget(
               totalTime: 200,
