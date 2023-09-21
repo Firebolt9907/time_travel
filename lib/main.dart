@@ -53,7 +53,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   addTime() {
-    time.value += 1;
+    time.value += 50;
   }
 
   @override
