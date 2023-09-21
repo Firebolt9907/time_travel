@@ -51,11 +51,12 @@ class _ItemWidgetState extends State<ItemWidget> {
                           valueListenable: time,
                           builder:
                               (BuildContext context, int value, Widget? child) {
+                            print(time.value % widget.totalTime);
                             return Container(
                               color: CupertinoColors.activeBlue,
                               height: 40,
                               width: (MediaQuery.of(context).size.width - 40) *
-                                  (value % widget.totalTime),
+                                  (time.value % widget.totalTime),
                             );
                           }),
                     ),
