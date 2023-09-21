@@ -57,6 +57,14 @@ class _MyAppState extends State<MyApp> {
   }
 
   @override
+  void dispose() {
+    // TODO: implement dispose
+
+    _timer.cancel();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     // return DynamicColorBuilder(builder: (lightColorScheme, darkColorScheme) {
     return CupertinoApp(
