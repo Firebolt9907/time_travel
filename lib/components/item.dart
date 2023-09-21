@@ -11,10 +11,7 @@ class ItemWidget extends StatefulWidget {
     this.moneyPerCycle,
   }) : super(key: key);
 
-  final timeElapsed;
   final totalTime;
-  final upgradePrice;
-  final moneyPerCycle;
 
   @override
   State<ItemWidget> createState() => _ItemWidgetState();

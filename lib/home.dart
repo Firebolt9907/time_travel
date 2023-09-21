@@ -42,10 +42,12 @@ class _HomePageState extends State<HomePage> {
               builder: (context) => UpgradePage(
                 totalTime: 200,
                 item: 1,
+                timePeriod: 'ancientEgypt',
               ),
             ),
             child: ItemWidget(
               totalTime: 200,
+              
             ),
           ),
         ],
