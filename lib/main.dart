@@ -34,9 +34,8 @@ class MyApp extends StatefulWidget {
 }
 
 ValueNotifier<double> money = ValueNotifier<double>(0);
-ValueNotifier<int> time = ValueNotifier<int>(
-    DateTime.now().millisecondsSinceEpoch *
-        (60 ~/ 1000)); //measured in frames NOT SECONDS OR MS
+ValueNotifier<int> time =
+    ValueNotifier<int>(0); //measured in frames NOT SECONDS OR MS
 
 class _MyAppState extends State<MyApp> {
   var loggedIn = false;
@@ -45,12 +44,14 @@ class _MyAppState extends State<MyApp> {
 
   @override
   void initState() {
+    time.value = DateTime.now().millisecondsSinceEpoch * (60 ~/ 1000);
+    print('time: ' + time.value.toString());
     // TODO: implement initState
     timer = Timer.periodic(
         Duration(seconds: 1),
         (Timer t) => () {
               // time.value += 1;
-              print('time: ');
+              print('time: ' + time.value.toString());
             });
     super.initState();
   }
