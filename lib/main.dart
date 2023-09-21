@@ -48,7 +48,7 @@ class _MyAppState extends State<MyApp> {
     print('time: ' + time.value.toString());
     // TODO: implement initState
     timer =
-        Timer.periodic(Duration(microseconds: 16666), (Timer t) => addTime());
+        Timer.periodic(Duration(microseconds: 8333), (Timer t) => addTime());
     super.initState();
   }
 
