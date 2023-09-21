@@ -44,7 +44,7 @@ class _ItemWidgetState extends State<ItemWidget> {
                     width: MediaQuery.of(context).size.width - 40,
                   ),
                   AnimatedSize(
-                    duration: Duration(milliseconds: 2000),
+                    duration: Duration(milliseconds: 100),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(10),
                       child: ValueListenableBuilder<int>(
@@ -55,7 +55,7 @@ class _ItemWidgetState extends State<ItemWidget> {
                             return Container(
                               color: CupertinoColors.activeBlue,
                               height: 40,
-                              width: (MediaQuery.of(context).size.width - 40) *
+                              width: time.value % widget.totalTime == 0 || time.value % widget.totalTime(MediaQuery.of(context).size.width - 40) *
                                   (time.value % widget.totalTime) /
                                   widget.totalTime,
                             );
