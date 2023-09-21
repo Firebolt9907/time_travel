@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             child: ItemWidget(
-              totalTime: 3,
+              totalTime: 200,
             ),
           ),
         ],
