@@ -1,5 +1,3 @@
-Map<int, Map<String, dynamic>> items = {
-  1: {
-    'name': 'Pyramid Bricks'
-  }
+Map<String, List<Map<String, dynamic>>> items = {
+  'ancientEgypt': []
 };
