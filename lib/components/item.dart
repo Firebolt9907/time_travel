@@ -67,12 +67,6 @@ class _ItemWidgetState extends State<ItemWidget> {
             ),
           ),
         ),
-        CupertinoButton(
-          child: Text('Upgrade'),
-          onPressed: () {},
-          disabledColor: CupertinoColors.activeBlue,
-          color: CupertinoColors.activeBlue,
-        ),
       ],
     );
   }
