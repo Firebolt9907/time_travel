@@ -23,6 +23,8 @@ class _HomePageState extends State<HomePage> {
       // extendBodyBehindAppBar: true,
       backgroundColor:
           context.isDarkMode ? CupertinoColors.black : CupertinoColors.white,
+      navigationBar:
+          CupertinoNavigationBar(middle: Text(money.value.toString())),
       child: ListView(
         children: [
           Center(
