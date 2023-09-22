@@ -20,13 +20,12 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      // extendBodyBehindAppBar: true,
       backgroundColor:
           context.isDarkMode ? CupertinoColors.black : CupertinoColors.white,
       navigationBar: CupertinoNavigationBar(
-          middle: ValueListenableBuilder<double>(
-              valueListenable: money,
-              builder: (BuildContext context, double value, Widget? child) {
+          middle: ValueListenableBuilder<int>(
+              valueListenable: time,
+              builder: (BuildContext context, int value, Widget? child) {
                 return Text('\$${money.value.toStringAsFixed(2)}');
               })),
       child: ListView(
