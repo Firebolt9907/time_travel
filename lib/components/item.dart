@@ -36,9 +36,14 @@ class _ItemWidgetState extends State<ItemWidget> {
             children: [
               Align(
                 alignment: Alignment.centerLeft,
-                child: Text(
-                  items[widget.timePeriod]![widget.item]['name'],
-                  textAlign: TextAlign.left,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 15.0, vertical: 10),
+                  child: Text(
+                    items[widget.timePeriod]![widget.item]['name'],
+                    textAlign: TextAlign.left,
+                    style: TextStyle(),
+                  ),
                 ),
               ),
               SizedBox(
