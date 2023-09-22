@@ -2,8 +2,8 @@ Map<String, List<Map<String, dynamic>>> items = {
   'ancientEgypt': [
     {
       'name': 'Money',
-      'timePeriod': '2600 BC - 30 BC'
-      'location': 'Ancient Egypt'
+      'timePeriod': '2600 BC - 30 BC',
+      'location': 'Ancient Egypt',
     },
     {
       'name': 'Ancient Sand',
@@ -13,7 +13,9 @@ Map<String, List<Map<String, dynamic>>> items = {
       'coefficient': 1.07,
       'initialRevenue': 1,
       'upgradeLevel': 1,
-      'description': 'You know what sand is...'
+      'description': 'You know what sand is...',
+      'automatic': true,
+      'offset': 0,
     },
     {
       'name': 'Canopic Jars',
@@ -23,7 +25,9 @@ Map<String, List<Map<String, dynamic>>> items = {
       'coefficient': 1.07,
       'initialRevenue': 1,
       'upgradeLevel': 1,
-      'description': 'Canopic jars were used in ancient Egypt to hold the preserved organs of mummies. They were often adorned with depictions of the four sons of Horus.'
+      'description': 'Canopic jars were used in ancient Egypt to hold the preserved organs of mummies. They were often adorned with depictions of the four sons of Horus.',
+      'automatic': true,
+      'offset': 0,
     },
     {
       'name': 'Hieroglyphic Tablets',
@@ -33,7 +37,9 @@ Map<String, List<Map<String, dynamic>>> items = {
       'coefficient': 1.07,
       'initialRevenue': 1,
       'upgradeLevel': 1,
-      'description': 'Hieroglyphic tablets were inscribed with intricate pictorial writing, telling stories and conveying important information in ancient Egypt.'
+      'description': 'Hieroglyphic tablets were inscribed with intricate pictorial writing, telling stories and conveying important information in ancient Egypt.',
+      'automatic': true,
+      'offset': 0,
     },
     {
       'name': 'Sacred Oils',
@@ -43,7 +49,9 @@ Map<String, List<Map<String, dynamic>>> items = {
       'coefficient': 1.07,
       'initialRevenue': 1,
       'upgradeLevel': 1,
-      'description': 'Ancient Egyptians used various oils and incense for religious rituals and healing purposes. They were often derived from rare herbs and plants.'
+      'description': 'Ancient Egyptians used various oils and incense for religious rituals and healing purposes. They were often derived from rare herbs and plants.',
+      'automatic': true,
+      'offset': 0,
     },
     {
       'name': 'Papyrus Scrolls',
@@ -53,7 +61,9 @@ Map<String, List<Map<String, dynamic>>> items = {
       'coefficient': 1.07,
       'initialRevenue': 1,
       'upgradeLevel': 1,
-      'description': 'Papyrus scrolls were ancient Egyptian documents made from the papyrus plant. They contained a wide range of knowledge, including religious texts, historical records, and medical treatises.'
+      'description': 'Papyrus scrolls were ancient Egyptian documents made from the papyrus plant. They contained a wide range of knowledge, including religious texts, historical records, and medical treatises.',
+      'automatic': true,
+      'offset': 0,
     },
     {
       'name': 'Scarab Amulets',
@@ -63,7 +73,9 @@ Map<String, List<Map<String, dynamic>>> items = {
       'coefficient': 1.07,
       'initialRevenue': 1,
       'upgradeLevel': 1,
-      'description': 'Scarab amulets were small, beetle-shaped artifacts made from various materials such as stone, faience, or precious metals. They were believed to bring protection, good luck, and ward off evil spirits in ancient Egypt.'
+      'description': 'Scarab amulets were small, beetle-shaped artifacts made from various materials such as stone, faience, or precious metals. They were believed to bring protection, good luck, and ward off evil spirits in ancient Egypt.',
+      'automatic': true,
+      'offset': 0,
     },
     {
       'name': "Pharoah's Treasures",
@@ -73,7 +85,9 @@ Map<String, List<Map<String, dynamic>>> items = {
       'coefficient': 1.07,
       'initialRevenue': 1,
       'upgradeLevel': 1,
-      'description': "Pharaoh's treasures refer to the priceless artifacts, jewelry, and royal relics found in the tombs of Egyptian pharaohs, such as Tutankhamun's tomb."
+      'description': "Pharaoh's treasures refer to the priceless artifacts, jewelry, and royal relics found in the tombs of Egyptian pharaohs, such as Tutankhamun's tomb.",
+      'automatic': true,
+      'offset': 0,
     },
     {
       'name': 'da piyramids',
@@ -83,7 +97,9 @@ Map<String, List<Map<String, dynamic>>> items = {
       'coefficient': 1.07,
       'initialRevenue': 1,
       'upgradeLevel': 1,
-      'description': 'da scrumdiddliumptious piyramids of egipt'
+      'description': 'da scrumdiddliumptious piyramids of egipt',
+      'automatic': true,
+      'offset': 0,
     },
   ]
 };
