@@ -47,14 +47,20 @@ class _ItemWidgetState extends State<ItemWidget> {
                               (BuildContext context, int value, Widget? child) {
                             // print(time.value % widget.totalTime);
                             return Container(
-                              color: CupertinoColors.activeBlue,
-                              height: 40,
-                              width: (MediaQuery.of(context).size.width - 40) *
-                                  (time.value % widget.totalTime) /
-                                  widget.totalTime,
-                                  alignment: Alignment.centerRight,
-                                  child: Text((widget.totalTime - (time.value % widget.totalTime)/120).toString() + '')
-                            );
+                                color: CupertinoColors.activeBlue,
+                                height: 40,
+                                width:
+                                    (MediaQuery.of(context).size.width - 40) *
+                                        (time.value % widget.totalTime) /
+                                        widget.totalTime,
+                                alignment: Alignment.centerRight,
+                                child: Text(((widget.totalTime -
+                                                (time.value %
+                                                    widget.totalTime)) /
+                                            120)
+                                        .toString() +
+                                    's left'),
+                                m);
                           }),
                     ),
                   )
