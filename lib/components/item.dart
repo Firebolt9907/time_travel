@@ -52,6 +52,8 @@ class _ItemWidgetState extends State<ItemWidget> {
                               width: (MediaQuery.of(context).size.width - 40) *
                                   (time.value % widget.totalTime) /
                                   widget.totalTime,
+                                  alignment: Alignment.centerRight,
+                                  child: Text((widget.totalTime - (time.value % widget.totalTime)/120).toString() + '')
                             );
                           }),
                     ),
