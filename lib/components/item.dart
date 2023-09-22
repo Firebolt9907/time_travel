@@ -116,14 +116,14 @@ class _ItemWidgetState extends State<ItemWidget> {
                 ),
               ),
               CupertinoButton(
-                  child: Text('Upgrade x1'
-                      // items[widget.timePeriod]![widget.item]['initialPrice'] *
-                      //     (pow(
-                      //             items[widget.timePeriod]![widget.item]
-                      //                 ['coefficient'],
-                      //             items[widget.timePeriod]![widget.item]
-                      //                 ['upgradeLevel']))
-                      //         .toString()
+                  child: Text('Upgrade x1 
+                      items[widget.timePeriod]![widget.item]['initialPrice'] *
+                          (pow(
+                                  items[widget.timePeriod]![widget.item]
+                                      ['coefficient'],
+                                  items[widget.timePeriod]![widget.item]
+                                      ['upgradeLevel']))
+                              .toString()
                       ),
                   color: items[widget.timePeriod]![widget.item]
                                   ['initialPrice'] *
@@ -134,15 +134,14 @@ class _ItemWidgetState extends State<ItemWidget> {
                                       ['upgradeLevel'])) <
                           money.value
                       ? CupertinoColors.activeOrange
-                      : CupertinoColors.inactiveGray
-                          : CupertinoColors.lightBackgroundGray,
+                      : CupertinoColors.inactiveGray,
                   onPressed: () {
                     if (items[widget.timePeriod]![widget.item]['initialPrice'] *
                             (pow(
                                 items[widget.timePeriod]![widget.item]
                                     ['coefficient'],
                                 items[widget.timePeriod]![widget.item]
-                                    ['upgradeLevel'])) >
+                                    ['upgradeLevel'])) <
                         money.value) {
                       money.value = -items[widget.timePeriod]![widget.item]
                               ['initialPrice'] *
