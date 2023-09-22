@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor:
           context.isDarkMode ? CupertinoColors.black : CupertinoColors.white,
       navigationBar: CupertinoNavigationBar(
-          middle: Text('\$${money.value.toStringAsFixed(2)}'), trailing: ,),
+          middle: Text('\$${money.value.toStringAsFixed(2)}')),
       child: ListView(
         children: [
           Center(

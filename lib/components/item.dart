@@ -50,28 +50,6 @@ class _ItemWidgetState extends State<ItemWidget> {
                   ),
                 ),
               ),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 15.0, top: 5),
-                  child: Text(
-                    'Next Upgrade: \$' +
-                        (items[widget.timePeriod]![widget.item]
-                                    ['initialPrice'] *
-                                (pow(
-                                    items[widget.timePeriod]![widget.item]
-                                        ['coefficient'],
-                                    items[widget.timePeriod]![widget.item]
-                                        ['upgradeLevel'])))
-                            .toStringAsFixed(2),
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                      fontWeight: FontWeight.normal,
-                      fontSize: 17,
-                    ),
-                  ),
-                ),
-              ),
               SizedBox(
                 height: 60,
                 width: screenSize.width - 20,
