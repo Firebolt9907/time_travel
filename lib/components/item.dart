@@ -57,12 +57,13 @@ class _ItemWidgetState extends State<ItemWidget> {
                   child: Text(
                     'Next Upgrade: \$' +
                         (items[widget.timePeriod]![widget.item]
-                                ['initialPrice'] *
-                            (pow(
-                                items[widget.timePeriod]![widget.item]
-                                    ['coefficient'],
-                                items[widget.timePeriod]![widget.item]
-                                    ['upgradeLevel']))),
+                                    ['initialPrice'] *
+                                (pow(
+                                    items[widget.timePeriod]![widget.item]
+                                        ['coefficient'],
+                                    items[widget.timePeriod]![widget.item]
+                                        ['upgradeLevel'])))
+                            .toStringAsFixed(2),
                     textAlign: TextAlign.left,
                     style: TextStyle(
                       fontWeight: FontWeight.normal,
