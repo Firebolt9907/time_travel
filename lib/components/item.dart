@@ -74,9 +74,13 @@ class _ItemWidgetState extends State<ItemWidget> {
                                 valueListenable: time,
                                 builder: (BuildContext context, int value,
                                     Widget? child) {
-                                      if (time.value % widget.totalTime == 0) {
-                                        money += items[widget.timePeriod]![widget.item]['initialRevenue'] * 
-                                      }
+                                  if (time.value % widget.totalTime == 0) {
+                                    print('earned money');
+                                    money.value += (items[widget.timePeriod]![
+                                            widget.item]['initialRevenue'] *
+                                        items[widget.timePeriod]![widget.item]
+                                            ['upgradeLevel']);
+                                  }
                                   // print(time.value % widget.totalTime);
                                   return Container(
                                     color: CupertinoColors.activeBlue,
