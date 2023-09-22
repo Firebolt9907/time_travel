@@ -54,7 +54,7 @@ class _ItemWidgetState extends State<ItemWidget> {
                   padding: const EdgeInsets.only(left: 15.0, top: 5),
                   child: Text(
                     'Next Upgrade: \$' +
-                        items[widget.timePeriod]![widget.item]['coefficient']
+                        (items[widget.timePeriod]![widget.item]['initialPrice'] * (items[widget.timePeriod]![widget.item]['coefficient'] ** items[widget.timePeriod]![widget.item]['upgradeLevel']))
                             ,
                     textAlign: TextAlign.left,
                     style: TextStyle(

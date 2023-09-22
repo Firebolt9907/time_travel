@@ -9,7 +9,8 @@ Map<String, List<Map<String, dynamic>>> items = {
       'initialTimeInSeconds': 0.6,
       'initialPrice': 3.738,
       'coefficient': 1.06,
-      'initialRevenue': 1
+      'initialRevenue': 1,
+      'upgradeLevel': 1,
     }
   ]
 };
