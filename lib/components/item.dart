@@ -53,18 +53,24 @@ class _ItemWidgetState extends State<ItemWidget> {
                                   (time.value % widget.totalTime) /
                                   widget.totalTime,
                               alignment: Alignment.centerRight,
-                              child: Text(
-                                (((widget.totalTime -
-                                                        (time.value %
-                                                            widget.totalTime)) /
-                                                    12)
-                                                .round() /
-                                            10)
-                                        .toString() +
-                                    's left ',
-                                maxLines: 1,
-                                style: TextStyle(
-                                  color: Colors.black,
+                              child: Padding(
+                                padding: const EdgeInsets.only(right: 5.0),
+                                child: Text(
+                                  (((widget.totalTime -
+                                                          (time.value %
+                                                              widget
+                                                                  .totalTime)) /
+                                                      12)
+                                                  .round() /
+                                              10)
+                                          .toString() +
+                                      's left',
+                                  maxLines: 1,
+                                  overflow: TextOverflow.clip,
+                                  textAlign: TextAlign.end,
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                  ),
                                 ),
                               ),
                             );
