@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:cringe_miner/components/item.dart';
+import 'package:cringe_miner/constants.dart';
 import 'package:cringe_miner/main.dart';
 import 'package:cringe_miner/setup.dart';
 import 'package:cringe_miner/upgrade.dart';
@@ -46,7 +47,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             child: ItemWidget(
-              totalTime: 200,
+              totalTime: items['ancientEgypt']![1]['initialTime'],
               item: 1,
               timePeriod: 'ancientEgypt',
             ),
