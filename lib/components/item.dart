@@ -5,10 +5,12 @@ import 'package:flutter/material.dart';
 class ItemWidget extends StatefulWidget {
   const ItemWidget({
     Key? key,
-    this.totalTime,
+    this.totalTime, this.item, this.timePeriod,
   }) : super(key: key);
 
   final totalTime;
+  final item;
+  final timePeriod;
 
   @override
   State<ItemWidget> createState() => _ItemWidgetState();
@@ -29,11 +31,12 @@ class _ItemWidgetState extends State<ItemWidget> {
               : CupertinoColors.lightBackgroundGray,
           child: Column(
             children: [
+              Text()
               SizedBox(
                 height: 60,
                 width: screenSize.width - 20,
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(10),
                     child: Stack(
