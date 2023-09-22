@@ -53,7 +53,7 @@ class _ItemWidgetState extends State<ItemWidget> {
                 child: Padding(
                   padding: const EdgeInsets.only(left: 15.0, top: 10),
                   child: Text(
-                    'Next Upgrade: $' ,
+                    'Next Upgrade: \$' + items[widget.timePeriod]![widget.item][''],
                     textAlign: TextAlign.left,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
