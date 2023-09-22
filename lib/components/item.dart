@@ -122,13 +122,18 @@ class _ItemWidgetState extends State<ItemWidget> {
                                   items[widget.timePeriod]![widget.item]
                                       ['upgradeLevel']))
                               .toStringAsFixed(2)),
-                              color: items[widget.timePeriod]![widget.item]['initialPrice'] *
-                            (pow(
-                                items[widget.timePeriod]![widget.item]
-                                    ['coefficient'],
-                                items[widget.timePeriod]![widget.item]
-                                    ['upgradeLevel'])) >
-                        money.value ? 
+                  color: items[widget.timePeriod]![widget.item]
+                                  ['initialPrice'] *
+                              (pow(
+                                  items[widget.timePeriod]![widget.item]
+                                      ['coefficient'],
+                                  items[widget.timePeriod]![widget.item]
+                                      ['upgradeLevel'])) >
+                          money.value
+                      ? CupertinoColors.activeOrange
+                      : context.isDarkMode
+                          ? CupertinoColors.darkBackgroundGray
+                          : CupertinoColors.lightBackgroundGray,
                   onPressed: () {
                     if (items[widget.timePeriod]![widget.item]['initialPrice'] *
                             (pow(
