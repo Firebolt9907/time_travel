@@ -1,3 +1,4 @@
+import 'package:cringe_miner/constants.dart';
 import 'package:cringe_miner/main.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -5,7 +6,9 @@ import 'package:flutter/material.dart';
 class ItemWidget extends StatefulWidget {
   const ItemWidget({
     Key? key,
-    this.totalTime, this.item, this.timePeriod,
+    required this.totalTime,
+    required this.item,
+    required this.timePeriod,
   }) : super(key: key);
 
   final totalTime;
@@ -31,7 +34,7 @@ class _ItemWidgetState extends State<ItemWidget> {
               : CupertinoColors.lightBackgroundGray,
           child: Column(
             children: [
-              Text()
+              Text(items[widget.timePeriod][widget.item]['name']),
               SizedBox(
                 height: 60,
                 width: screenSize.width - 20,
