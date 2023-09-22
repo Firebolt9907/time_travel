@@ -19,70 +19,76 @@ class _ItemWidgetState extends State<ItemWidget> {
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
 
-    return Column(
-      children: [
-        SizedBox(
-          height: 60,
-          width: screenSize.width - 20,
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-              child: Stack(
-                children: [
-                  Container(
-                    color: context.isDarkMode
-                        ? CupertinoColors.darkBackgroundGray
-                        : CupertinoColors.lightBackgroundGray,
-                    height: 40,
-                    width: MediaQuery.of(context).size.width - 60,
-                  ),
-                  AnimatedSize(
-                    duration: Duration(milliseconds: 100),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: ValueListenableBuilder<int>(
-                          valueListenable: time,
-                          builder:
-                              (BuildContext context, int value, Widget? child) {
-                            // print(time.value % widget.totalTime);
-                            return Container(
-                              color: CupertinoColors.activeBlue,
-                              height: 40,
-                              width: (MediaQuery.of(context).size.width - 40) *
-                                  (time.value % widget.totalTime) /
-                                  widget.totalTime,
-                              alignment: Alignment.centerRight,
-                              child: Padding(
-                                padding: const EdgeInsets.only(right: 5.0),
-                                child: Text(
-                                  (((widget.totalTime -
-                                                          (time.value %
-                                                              widget
-                                                                  .totalTime)) /
-                                                      12)
-                                                  .round() /
-                                              10)
-                                          .toString() +
-                                      's left',
-                                  maxLines: 1,
-                                  overflow: TextOverflow.clip,
-                                  textAlign: TextAlign.end,
-                                  style: TextStyle(
-                                    color: Colors.black,
+    return Container(
+      color: context.isDarkMode
+          ? CupertinoColors.darkBackgroundGray
+          : CupertinoColors.lightBackgroundGray,
+      child: Column(
+        children: [
+          SizedBox(
+            height: 60,
+            width: screenSize.width - 20,
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Stack(
+                  children: [
+                    Container(
+                      color: context.isDarkMode
+                          ? CupertinoColors.darkBackgroundGray
+                          : CupertinoColors.lightBackgroundGray,
+                      height: 40,
+                      width: MediaQuery.of(context).size.width - 60,
+                    ),
+                    AnimatedSize(
+                      duration: Duration(milliseconds: 100),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: ValueListenableBuilder<int>(
+                            valueListenable: time,
+                            builder: (BuildContext context, int value,
+                                Widget? child) {
+                              // print(time.value % widget.totalTime);
+                              return Container(
+                                color: CupertinoColors.activeBlue,
+                                height: 40,
+                                width:
+                                    (MediaQuery.of(context).size.width - 60) *
+                                        (time.value % widget.totalTime) /
+                                        widget.totalTime,
+                                alignment: Alignment.centerRight,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(right: 5.0),
+                                  child: Text(
+                                    (((widget.totalTime -
+                                                            (time.value %
+                                                                widget
+                                                                    .totalTime)) /
+                                                        12)
+                                                    .round() /
+                                                10)
+                                            .toString() +
+                                        's left',
+                                    maxLines: 1,
+                                    overflow: TextOverflow.clip,
+                                    textAlign: TextAlign.end,
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                    ),
                                   ),
                                 ),
-                              ),
-                            );
-                          }),
-                    ),
-                  )
-                ],
+                              );
+                            }),
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
