@@ -74,6 +74,8 @@ class _ItemWidgetState extends State<ItemWidget> {
                                 valueListenable: time,
                                 builder: (BuildContext context, int value,
                                     Widget? child) {
+                                  print(items[widget.timePeriod]![widget.item]
+                                      ['upgradeLevel']);
                                   // print(time.value % widget.totalTime);
                                   return Container(
                                     color: CupertinoColors.activeBlue,
@@ -114,14 +116,15 @@ class _ItemWidgetState extends State<ItemWidget> {
                 ),
               ),
               CupertinoButton(
-                  child: Text('Upgrade x1' +
-                      items[widget.timePeriod]![widget.item]['initialPrice'] *
-                          (pow(
-                                  items[widget.timePeriod]![widget.item]
-                                      ['coefficient'],
-                                  items[widget.timePeriod]![widget.item]
-                                      ['upgradeLevel']))
-                              .toString()),
+                  child: Text('Upgrade x1'
+                      // items[widget.timePeriod]![widget.item]['initialPrice'] *
+                      //     (pow(
+                      //             items[widget.timePeriod]![widget.item]
+                      //                 ['coefficient'],
+                      //             items[widget.timePeriod]![widget.item]
+                      //                 ['upgradeLevel']))
+                      //         .toString()
+                      ),
                   color: items[widget.timePeriod]![widget.item]
                                   ['initialPrice'] *
                               (pow(
