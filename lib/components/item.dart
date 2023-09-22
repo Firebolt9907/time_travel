@@ -23,7 +23,7 @@ class _ItemWidgetState extends State<ItemWidget> {
       children: [
         SizedBox(
           height: 60,
-          width: screenSize.width,
+          width: screenSize.width - 20,
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             child: ClipRRect(
@@ -35,7 +35,7 @@ class _ItemWidgetState extends State<ItemWidget> {
                         ? CupertinoColors.darkBackgroundGray
                         : CupertinoColors.lightBackgroundGray,
                     height: 40,
-                    width: MediaQuery.of(context).size.width - 40,
+                    width: MediaQuery.of(context).size.width - 60,
                   ),
                   AnimatedSize(
                     duration: Duration(milliseconds: 100),
