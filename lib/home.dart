@@ -41,7 +41,7 @@ class _HomePageState extends State<HomePage> {
             onTap: () => CupertinoScaffold.showCupertinoModalBottomSheet(
               context: context,
               builder: (context) => UpgradePage(
-                totalTime: 200,
+                totalTime: items['ancientEgypt']![1]['initialTime'],
                 item: 1,
                 timePeriod: 'ancientEgypt',
               ),
