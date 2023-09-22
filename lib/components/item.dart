@@ -34,7 +34,7 @@ class _ItemWidgetState extends State<ItemWidget> {
               : CupertinoColors.lightBackgroundGray,
           child: Column(
             children: [
-              Text(items[widget.timePeriod][widget.item]['name']),
+              Text(items[widget.timePeriod]![widget.item]['name']),
               SizedBox(
                 height: 60,
                 width: screenSize.width - 20,
