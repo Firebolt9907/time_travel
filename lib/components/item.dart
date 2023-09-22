@@ -55,7 +55,7 @@ class _ItemWidgetState extends State<ItemWidget> {
                   child: Text(
                     'Next Upgrade: \$' +
                         items[widget.timePeriod]![widget.item]['coefficient']
-                            .toString(),
+                            ,
                     textAlign: TextAlign.left,
                     style: TextStyle(
                       fontWeight: FontWeight.normal,
