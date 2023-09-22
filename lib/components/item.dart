@@ -51,13 +51,15 @@ class _ItemWidgetState extends State<ItemWidget> {
               Align(
                 alignment: Alignment.centerLeft,
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 15.0, top: 10),
+                  padding: const EdgeInsets.only(left: 15.0, top: 5),
                   child: Text(
-                    'Next Upgrade: \$' + items[widget.timePeriod]![widget.item][''],
+                    'Next Upgrade: \$' +
+                        items[widget.timePeriod]![widget.item]['coefficient']
+                            .toString(),
                     textAlign: TextAlign.left,
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 30,
+                      fontWeight: FontWeight.normal,
+                      fontSize: 17,
                     ),
                   ),
                 ),
