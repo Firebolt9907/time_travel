@@ -42,7 +42,10 @@ class _ItemWidgetState extends State<ItemWidget> {
                   child: Text(
                     items[widget.timePeriod]![widget.item]['name'],
                     textAlign: TextAlign.left,
-                    style: TextStyle(),
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 30,
+                    ),
                   ),
                 ),
               ),
@@ -50,7 +53,7 @@ class _ItemWidgetState extends State<ItemWidget> {
                 height: 60,
                 width: screenSize.width - 20,
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                  padding: EdgeInsets.only(left: 10, top: 10),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(10),
                     child: Stack(
