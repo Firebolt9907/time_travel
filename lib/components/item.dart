@@ -48,6 +48,20 @@ class _ItemWidgetState extends State<ItemWidget> {
                   ),
                 ),
               ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 15.0, top: 10),
+                  child: Text(
+                    'Next Upgrade: $' ,
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 30,
+                    ),
+                  ),
+                ),
+              ),
               SizedBox(
                 height: 60,
                 width: screenSize.width - 20,
