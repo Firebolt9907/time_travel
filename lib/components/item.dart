@@ -121,7 +121,7 @@ class _ItemWidgetState extends State<ItemWidget> {
                                       ['coefficient'],
                                   items[widget.timePeriod]![widget.item]
                                       ['upgradeLevel']))
-                              .toStringAsFixed(2)),
+                              .toString()),
                   color: items[widget.timePeriod]![widget.item]
                                   ['initialPrice'] *
                               (pow(
