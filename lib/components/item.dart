@@ -53,11 +53,20 @@ class _ItemWidgetState extends State<ItemWidget> {
                                   (time.value % widget.totalTime) /
                                   widget.totalTime,
                               alignment: Alignment.centerRight,
-                              child: Text(((widget.totalTime -
-                                              (time.value % widget.totalTime)) /
-                                          12).round()
-                                      .toString() +
-                                  's left'),
+                              child: Text(
+                                (((widget.totalTime -
+                                                        (time.value %
+                                                            widget.totalTime)) /
+                                                    12)
+                                                .round() /
+                                            10)
+                                        .toString() +
+                                    's left ',
+                                maxLines: 1,
+                                style: TextStyle(
+                                  color: Colors.black,
+                                ),
+                              ),
                             );
                           }),
                     ),
