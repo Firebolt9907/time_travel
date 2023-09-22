@@ -116,15 +116,8 @@ class _ItemWidgetState extends State<ItemWidget> {
                 ),
               ),
               CupertinoButton(
-                  child: Text('Upgrade x1 
-                      items[widget.timePeriod]![widget.item]['initialPrice'] *
-                          (pow(
-                                  items[widget.timePeriod]![widget.item]
-                                      ['coefficient'],
-                                  items[widget.timePeriod]![widget.item]
-                                      ['upgradeLevel']))
-                              .toString()
-                      ),
+                  child: Text(
+                      'Upgrade x1: \$${(items[widget.timePeriod]![widget.item]['initialPrice'] * (pow(items[widget.timePeriod]![widget.item]['coefficient'], items[widget.timePeriod]![widget.item]['upgradeLevel']))).toStringAsFixed(2)}'),
                   color: items[widget.timePeriod]![widget.item]
                                   ['initialPrice'] *
                               (pow(
