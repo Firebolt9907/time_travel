@@ -44,8 +44,8 @@ class _HomePageState extends State<HomePage> {
               }),
         ));
       } else {
-        listItems.add(Bounceable(
-          
+        listItems.add(
+          /* Bounceable(
           onTap: () => CupertinoScaffold.showCupertinoModalBottomSheet(
             context: context,
             builder: (context) => UpgradePage(
@@ -55,12 +55,13 @@ class _HomePageState extends State<HomePage> {
               timePeriod: 'ancientEgypt',
             ),
           ),
-          child: ItemWidget(
+          child:  */
+          ItemWidget(
             totalTime: items['ancientEgypt']![i]['initialTimeInSeconds'] * 120,
             item: i,
             timePeriod: 'ancientEgypt',
           ),
-        ));
+        ) /* ) */;
       }
       i++;
     }
