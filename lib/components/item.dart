@@ -62,7 +62,8 @@ class _ItemWidgetState extends State<ItemWidget> {
                   ),
                 ),
               ),
-              Align(
+              items[widget.timePeriod]![widget.item]
+                                              ['upgradeLevel'] != 0 ? Align(
                 alignment: Alignment.centerLeft,
                 child: Padding(
                   padding: const EdgeInsets.only(left: 15.0, top: 0),
@@ -114,8 +115,9 @@ class _ItemWidgetState extends State<ItemWidget> {
                         ));
                       }),
                 ),
-              ),
-              Align(
+              ) : Container(),
+              items[widget.timePeriod]![widget.item]
+                                              ['upgradeLevel'] != 0 ? Align(
                 alignment: Alignment.centerLeft,
                 child: Padding(
                   padding: const EdgeInsets.only(left: 15.0, top: 0),
@@ -149,8 +151,9 @@ class _ItemWidgetState extends State<ItemWidget> {
                         ));
                       }),
                 ),
-              ),
-              SizedBox(
+              ) : Container(),
+              items[widget.timePeriod]![widget.item]
+                                              ['upgradeLevel'] != 0 ? SizedBox(
                 height: 60,
                 width: screenSize.width - 20,
                 child: Padding(
@@ -212,7 +215,7 @@ class _ItemWidgetState extends State<ItemWidget> {
                     ),
                   ),
                 ),
-              ),
+              ) : Container(),
               ValueListenableBuilder<int>(
                   valueListenable: time,
                   builder: (BuildContext context, int value, Widget? child) {
