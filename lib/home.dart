@@ -17,7 +17,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  List<Widget> listItems = [];
+  List<Widget> listItems = [
+    Opacity(opacity: 0, child: CupertinoNavigationBar())
+  ];
 
   @override
   void initState() {
