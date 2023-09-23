@@ -54,6 +54,7 @@ class _MyAppState extends State<MyApp> {
 
   addTime() {
     time.value += 1;
+    if (time.value % 12) 
   }
 
   @override
