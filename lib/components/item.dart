@@ -127,43 +127,45 @@ class _ItemWidgetState extends State<ItemWidget> {
               ValueListenableBuilder<int>(
                   valueListenable: time,
                   builder: (BuildContext context, int value, Widget? child) {
-                    return SizedBox(
-                      height: 60,
-                width: screenSize.width - 20,
-                      child: CupertinoButton(
-                          child: Text(
-                              'Upgrade x1: \$${(items[widget.timePeriod]![widget.item]['initialPrice'] * (pow(items[widget.timePeriod]![widget.item]['coefficient'], items[widget.timePeriod]![widget.item]['upgradeLevel']))).toStringAsFixed(2)}'),
-                          color: items[widget.timePeriod]![widget.item]
+                    return Padding(
+                      padding: EdgeInsets.only(bottom: 10),
+                      child: SizedBox(
+                        width: screenSize.width - 40,
+                        child: CupertinoButton(
+                            child: Text(
+                                'Upgrade x1: \$${(items[widget.timePeriod]![widget.item]['initialPrice'] * (pow(items[widget.timePeriod]![widget.item]['coefficient'], items[widget.timePeriod]![widget.item]['upgradeLevel']))).toStringAsFixed(2)}'),
+                            color: items[widget.timePeriod]![widget.item]
+                                            ['initialPrice'] *
+                                        (pow(
+                                            items[widget.timePeriod]![
+                                                widget.item]['coefficient'],
+                                            items[widget.timePeriod]![widget
+                                                .item]['upgradeLevel'])) <=
+                                    money.value
+                                ? CupertinoColors.activeOrange
+                                : CupertinoColors.inactiveGray,
+                            onPressed: () {
+                              if (items[widget.timePeriod]![widget.item]
                                           ['initialPrice'] *
                                       (pow(
                                           items[widget.timePeriod]![widget.item]
                                               ['coefficient'],
                                           items[widget.timePeriod]![widget.item]
-                                              ['upgradeLevel'])) <=
-                                  money.value
-                              ? CupertinoColors.activeOrange
-                              : CupertinoColors.inactiveGray,
-                          onPressed: () {
-                            if (items[widget.timePeriod]![widget.item]
-                                        ['initialPrice'] *
-                                    (pow(
-                                        items[widget.timePeriod]![widget.item]
-                                            ['coefficient'],
-                                        items[widget.timePeriod]![widget.item]
-                                            ['upgradeLevel'])) <
-                                money.value) {
-                              money.value = money.value -
-                                  items[widget.timePeriod]![widget.item]
-                                          ['initialPrice'] *
-                                      (pow(
-                                          items[widget.timePeriod]![widget.item]
-                                              ['coefficient'],
-                                          items[widget.timePeriod]![widget.item]
-                                              ['upgradeLevel']));
-                              items[widget.timePeriod]![widget.item]
-                                  ['upgradeLevel'] += 1;
-                            }
-                          }),
+                                              ['upgradeLevel'])) <
+                                  money.value) {
+                                money.value = money.value -
+                                    items[widget.timePeriod]![widget.item]
+                                            ['initialPrice'] *
+                                        (pow(
+                                            items[widget.timePeriod]![
+                                                widget.item]['coefficient'],
+                                            items[widget.timePeriod]![
+                                                widget.item]['upgradeLevel']));
+                                items[widget.timePeriod]![widget.item]
+                                    ['upgradeLevel'] += 1;
+                              }
+                            }),
+                      ),
                     );
                   }),
             ],
