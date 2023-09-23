@@ -43,7 +43,7 @@ Map<String, List<Map<String, dynamic>>> items = {
       'initialTimeInSeconds': 12,
       'initialPrice': 8640,
       'coefficient': 1.13,
-      'initialRevenue': 1,
+      'initialRevenue': ,
       'upgradeLevel': 0,
       'description': 'Ancient Egyptians used various oils and incense for religious rituals and healing purposes. They were often derived from rare herbs and plants.',
       'automatic': true,
