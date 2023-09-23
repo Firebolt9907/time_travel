@@ -123,7 +123,7 @@ class _ItemWidgetState extends State<ItemWidget> {
               ValueListenableBuilder<int>(
                   valueListenable: time,
                   builder: (BuildContext context, int value, Widget? child) {
-                    CupertinoButton(
+                    return CupertinoButton(
                         child: Text(
                             'Upgrade x1: \$${(items[widget.timePeriod]![widget.item]['initialPrice'] * (pow(items[widget.timePeriod]![widget.item]['coefficient'], items[widget.timePeriod]![widget.item]['upgradeLevel']))).toStringAsFixed(2)}'),
                         color: items[widget.timePeriod]![widget.item]
