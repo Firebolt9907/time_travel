@@ -29,6 +29,7 @@ class _HomePageState extends State<HomePage> {
                 return Text('\$${money.value.toStringAsFixed(2)}');
               })),
       child: ListView.builder(
+        itemCount: ,
         itemBuilder: (context, index) {
           if (index == 0) {
 return Center(
