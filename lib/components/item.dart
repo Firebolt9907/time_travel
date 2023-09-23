@@ -62,6 +62,37 @@ class _ItemWidgetState extends State<ItemWidget> {
                   ),
                 ),
               ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 15.0, top: 0),
+                  child: RichText(
+                    text: TextSpan(
+                      // Note: Styles for TextSpans must be explicitly defined.
+                      // Child text spans will inherit styles from parent
+                      style: TextStyle(
+                        fontSize: 11,
+                        color: context.isDarkMode ? Colors.white : Colors.black,
+                      ),
+                      children: <TextSpan>[
+                        TextSpan(
+                          text: '\$' +
+                              (items[widget.timePeriod]![widget.item]
+                                          ['initialRevenue'] *
+                                      items[widget.timePeriod]![widget.item]
+                                          ['upgradeLevel'])
+                                  .toString(),
+                          // textAlign: TextAlign.left,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
               SizedBox(
                 height: 60,
                 width: screenSize.width - 20,
@@ -118,20 +149,21 @@ class _ItemWidgetState extends State<ItemWidget> {
                                               padding: const EdgeInsets.only(
                                                   right: 5.0),
                                               child: Text(
-                                                      (((widget.totalTime - (time.value % widget.totalTime)) /
-                                                                          12)
-                                                                      .round() /
-                                                                  10)
-                                                              .toString() +
-                                                          's left',
-                                                      maxLines: 1,
-                                                      overflow:
-                                                          TextOverflow.clip,
-                                                      textAlign: TextAlign.end,
-                                                      style: TextStyle(
-                                                        color: Colors.black,
-                                                      ),
-                                                    ),
+                                                (((widget.totalTime -
+                                                                        (time.value %
+                                                                            widget.totalTime)) /
+                                                                    12)
+                                                                .round() /
+                                                            10)
+                                                        .toString() +
+                                                    's left',
+                                                maxLines: 1,
+                                                overflow: TextOverflow.clip,
+                                                textAlign: TextAlign.end,
+                                                style: TextStyle(
+                                                  color: Colors.black,
+                                                ),
+                                              ),
                                             ),
                                           )),
                                     ],
