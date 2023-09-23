@@ -67,7 +67,10 @@ class _ItemWidgetState extends State<ItemWidget> {
                 child: Padding(
                   padding: const EdgeInsets.only(left: 15.0, top: 0),
                   child: RichText(
-                    text: TextSpan(
+                    text:  ValueListenableBuilder<int>(
+                                valueListenable: time,
+                                builder: (BuildContext context, int value,
+                                    Widget? child) {TextSpan(
                       // Note: Styles for TextSpans must be explicitly defined.
                       // Child text spans will inherit styles from parent
                       style: TextStyle(
@@ -88,8 +91,24 @@ class _ItemWidgetState extends State<ItemWidget> {
                             fontSize: 20,
                           ),
                         ),
+                        TextSpan(
+                          text: ' - ' +
+                              (((widget.totalTime -
+                                                                        (time.value %
+                                                                            widget.totalTime)) /
+                                                                    12)
+                                                                .round() /
+                                                            10)
+                                                        .toString() +
+                                                    's left',
+                          // textAlign: TextAlign.left,
+                          style: TextStyle(
+                            fontWeight: FontWeight.normal,
+                            fontSize: 20,
+                          ),
+                        ),
                       ],
-                    ),
+                    );}),
                   ),
                 ),
               ),
