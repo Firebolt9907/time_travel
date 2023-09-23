@@ -18,6 +18,14 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   @override
+  void initState() { 
+    super.initState();
+    
+  }
+
+  add
+
+  @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       backgroundColor:
@@ -28,7 +36,7 @@ class _HomePageState extends State<HomePage> {
               builder: (BuildContext context, int value, Widget? child) {
                 return Text('\$${money.value.toStringAsFixed(2)}');
               })),
-      child: ListView.custom(
+      child: ListView.builder(
         itemCount: items['ancientEgypt']!.length,
         itemBuilder: (context, index) {
           if (index == 0) {
