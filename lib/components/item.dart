@@ -117,42 +117,51 @@ class _ItemWidgetState extends State<ItemWidget> {
                                             child: Padding(
                                               padding: const EdgeInsets.only(
                                                   right: 5.0),
-                                              child: Text(
-                                                (((widget.totalTime -
-                                                                        (time.value %
-                                                                            widget.totalTime)) /
-                                                                    12)
-                                                                .round() /
-                                                            10)
-                                                        .toString() +
-                                                    's left',
-                                                maxLines: 1,
-                                                overflow: TextOverflow.clip,
-                                                textAlign: TextAlign.end,
-                                                style: TextStyle(
-                                                  color: Colors.black,
-                                                ),
-                                              ),
+                                              child: (time.value %
+                                                              widget
+                                                                  .totalTime) /
+                                                          widget.totalTime >
+                                                      0.5
+                                                  ? Text(
+                                                      (((widget.totalTime - (time.value % widget.totalTime)) /
+                                                                          12)
+                                                                      .round() /
+                                                                  10)
+                                                              .toString() +
+                                                          's left',
+                                                      maxLines: 1,
+                                                      overflow:
+                                                          TextOverflow.clip,
+                                                      textAlign: TextAlign.end,
+                                                      style: TextStyle(
+                                                        color: Colors.black,
+                                                      ),
+                                                    )
+                                                  : Container(),
                                             ),
                                           )),
-                                      Text(
-                                        ' ' +
-                                            (((widget.totalTime -
-                                                                (time.value %
-                                                                    widget
-                                                                        .totalTime)) /
-                                                            12)
-                                                        .round() /
-                                                    10)
-                                                .toString() +
-                                            's left',
-                                        maxLines: 1,
-                                        overflow: TextOverflow.clip,
-                                        textAlign: TextAlign.end,
-                                        style: TextStyle(
-                                            // color: Colors.black,
-                                            ),
-                                      ),
+                                      (time.value % widget.totalTime) /
+                                                  widget.totalTime <=
+                                              0.5
+                                          ? Text(
+                                              ' ' +
+                                                  (((widget.totalTime -
+                                                                      (time.value %
+                                                                          widget
+                                                                              .totalTime)) /
+                                                                  12)
+                                                              .round() /
+                                                          10)
+                                                      .toString() +
+                                                  's left',
+                                              maxLines: 1,
+                                              overflow: TextOverflow.clip,
+                                              textAlign: TextAlign.end,
+                                              style: TextStyle(
+                                                  // color: Colors.black,
+                                                  ),
+                                            )
+                                          : Container(),
                                     ],
                                   );
                                 }),
