@@ -102,3 +102,4 @@ Map<String, List<Map<String, dynamic>>> items = {
   ]
 };
 
+int lastUpgrade = 0;
