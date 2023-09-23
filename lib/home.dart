@@ -26,7 +26,8 @@ class _HomePageState extends State<HomePage> {
   }
 
   addItems() {
-    while (i = 0; i++; i < items['ancientEgypt']!.length) {
+    var i = 0;
+    while (i < items['ancientEgypt']!.length) {
 
     }
   }
