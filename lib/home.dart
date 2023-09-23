@@ -28,9 +28,10 @@ class _HomePageState extends State<HomePage> {
               builder: (BuildContext context, int value, Widget? child) {
                 return Text('\$${money.value.toStringAsFixed(2)}');
               })),
-      child: ListView(
-        children: [
-          Center(
+      child: ListView.builder(
+        itemBuilder: (context, index) {
+          if (index == 0) {
+return Center(
             child: CupertinoButton(
                 disabledColor: CupertinoColors.activeBlue,
                 color: CupertinoColors.activeBlue,
@@ -41,23 +42,25 @@ class _HomePageState extends State<HomePage> {
                     builder: (context) => SetupPage(),
                   );
                 }),
-          ),
-          Bounceable(
+          );
+          } else {
+            return Bounceable(
             onTap: () => CupertinoScaffold.showCupertinoModalBottomSheet(
               context: context,
               builder: (context) => UpgradePage(
-                totalTime: items['ancientEgypt']![1]['initialTime'],
-                item: 1,
+                totalTime: items['ancientEgypt']![index]['initialTime'],
+                item: index,
                 timePeriod: 'ancientEgypt',
               ),
             ),
             child: ItemWidget(
-              totalTime: items['ancientEgypt']![1]['initialTime'],
-              item: 1,
+              totalTime: items['ancientEgypt']![index]['initialTime'],
+              item: index,
               timePeriod: 'ancientEgypt',
             ),
-          ),
-        ],
+          );
+          }
+        },
       ),
     );
   }
