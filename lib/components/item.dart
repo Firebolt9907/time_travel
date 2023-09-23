@@ -136,7 +136,8 @@ class _ItemWidgetState extends State<ItemWidget> {
                                             ),
                                           )),
                                       Text(
-                                        (((widget.totalTime -
+                                        ' ' +
+                                            (((widget.totalTime -
                                                                 (time.value %
                                                                     widget
                                                                         .totalTime)) /
@@ -149,8 +150,8 @@ class _ItemWidgetState extends State<ItemWidget> {
                                         overflow: TextOverflow.clip,
                                         textAlign: TextAlign.end,
                                         style: TextStyle(
-                                          color: Colors.black,
-                                        ),
+                                            // color: Colors.black,
+                                            ),
                                       ),
                                     ],
                                   );
