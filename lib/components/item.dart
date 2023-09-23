@@ -82,36 +82,40 @@ class _ItemWidgetState extends State<ItemWidget> {
                                             ['upgradeLevel']);
                                   }
                                   // print(time.value % widget.totalTime);
-                                  return Container(
-                                    color: CupertinoColors.activeBlue,
-                                    height: 40,
-                                    width: (MediaQuery.of(context).size.width -
-                                            60) *
-                                        (time.value % widget.totalTime) /
-                                        widget.totalTime,
-                                    alignment: Alignment.centerRight,
-                                    child: Padding(
-                                      padding:
-                                          const EdgeInsets.only(right: 5.0),
-                                      child: Text(
-                                        (((widget.totalTime -
-                                                                (time.value %
-                                                                    widget
-                                                                        .totalTime)) /
-                                                            12)
-                                                        .round() /
-                                                    10)
-                                                .toString() +
-                                            's left',
-                                        maxLines: 1,
-                                        overflow: TextOverflow.clip,
-                                        textAlign: TextAlign.end,
-                                        style: TextStyle(
-                                          color: Colors.black,
+                                  return AnimatedSize(
+                                      duration: Duration(milliseconds: 100),
+                                      child: Container(
+                                        color: CupertinoColors.activeBlue,
+                                        height: 40,
+                                        width: (time.value % widget.totalTime) < 12 &&(MediaQuery.of(context)
+                                                    .size
+                                                    .width -
+                                                60) *
+                                            (time.value % widget.totalTime) /
+                                            widget.totalTime,
+                                        alignment: Alignment.centerRight,
+                                        child: Padding(
+                                          padding:
+                                              const EdgeInsets.only(right: 5.0),
+                                          child: Text(
+                                            (((widget.totalTime -
+                                                                    (time.value %
+                                                                        widget
+                                                                            .totalTime)) /
+                                                                12)
+                                                            .round() /
+                                                        10)
+                                                    .toString() +
+                                                's left',
+                                            maxLines: 1,
+                                            overflow: TextOverflow.clip,
+                                            textAlign: TextAlign.end,
+                                            style: TextStyle(
+                                              color: Colors.black,
+                                            ),
+                                          ),
                                         ),
-                                      ),
-                                    ),
-                                  );
+                                      ));
                                 }),
                           ),
                         )
