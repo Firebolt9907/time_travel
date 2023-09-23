@@ -67,7 +67,8 @@ class _ItemWidgetState extends State<ItemWidget> {
                           width: MediaQuery.of(context).size.width - 60,
                         ),
                         AnimatedSize(
-                          duration: Duration(milliseconds: 100),
+                          duration: Duration(milliseconds: items[widget.timePeriod]![widget.item]
+                                            ['upgradeLevel']),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(10),
                             child: ValueListenableBuilder<int>(
