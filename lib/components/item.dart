@@ -149,6 +149,8 @@ class _ItemWidgetState extends State<ItemWidget> {
                                       ['coefficient'],
                                   items[widget.timePeriod]![widget.item]
                                       ['upgradeLevel']));
+                      items[widget.timePeriod]![widget.item]['upgradeLevel'] +=
+                          1;
                     }
                   })
             ],
