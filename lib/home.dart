@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
               builder: (BuildContext context, int value, Widget? child) {
                 return Text('\$${money.value.toStringAsFixed(2)}');
               })),
-      child: ListView.builder(
+      child: ListView.custom(
         itemCount: items['ancientEgypt']!.length,
         itemBuilder: (context, index) {
           if (index == 0) {
