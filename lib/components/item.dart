@@ -41,27 +41,25 @@ class _ItemWidgetState extends State<ItemWidget> {
                 child: Padding(
                   padding: const EdgeInsets.only(left: 15.0, top: 10),
                   child: RichText(
-                                        text: TextSpan(
-                                          // Note: Styles for TextSpans must be explicitly defined.
-                                          // Child text spans will inherit styles from parent
-                                          style: TextStyle(
-                                            fontSize: 11,
-                                            color: context.isDarkMode
-                                                ? Colors.white
-                                                : Colors.black,
-                                          ),
-                                          children: <TextSpan>[
-                                            TextSpan(
-                    text: items[widget.timePeriod]![widget.item]['name'],
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 30,
+                    text: TextSpan(
+                      // Note: Styles for TextSpans must be explicitly defined.
+                      // Child text spans will inherit styles from parent
+                      style: TextStyle(
+                        fontSize: 11,
+                        color: context.isDarkMode ? Colors.white : Colors.black,
+                      ),
+                      children: <TextSpan>[
+                        TextSpan(
+                          text: items[widget.timePeriod]![widget.item]['name'],
+                          // textAlign: TextAlign.left,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 30,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                                          ],
-                                        ),
-                                      ),
                 ),
               ),
               SizedBox(
