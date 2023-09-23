@@ -28,7 +28,38 @@ class _HomePageState extends State<HomePage> {
   addItems() {
     var i = 0;
     while (i < items['ancientEgypt']!.length) {
-
+      if (i == 0) {
+        listItems.add(Center(
+          child: CupertinoButton(
+              disabledColor: CupertinoColors.activeBlue,
+              color: CupertinoColors.activeBlue,
+              child: Text('Click Me'),
+              onPressed: () {
+                CupertinoScaffold.showCupertinoModalBottomSheet(
+                  context: context,
+                  builder: (context) => SetupPage(),
+                );
+              }),
+        ));
+      } else {
+        Bounceable(
+          onTap: () => CupertinoScaffold.showCupertinoModalBottomSheet(
+            context: context,
+            builder: (context) => UpgradePage(
+              totalTime:
+                  items['ancientEgypt']![i]['initialTimeInSeconds'] * 120,
+              item: i,
+              timePeriod: 'ancientEgypt',
+            ),
+          ),
+          child: ItemWidget(
+            totalTime: items['ancientEgypt']![i]['initialTimeInSeconds'] * 120,
+            item: i,
+            timePeriod: 'ancientEgypt',
+          ),
+        );
+      }
+      i++;
     }
   }
 
@@ -45,9 +76,7 @@ class _HomePageState extends State<HomePage> {
               })),
       child: ListView.builder(
         itemCount: items['ancientEgypt']!.length,
-        itemBuilder: (context, index) {
-          
-        },
+        itemBuilder: (context, index) {},
       ),
     );
   }
