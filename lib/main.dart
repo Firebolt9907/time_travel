@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:cringe_miner/constants.dart';
 import 'package:cringe_miner/home.dart';
 import 'package:cringe_miner/setup.dart';
 import 'package:dynamic_color/dynamic_color.dart';
@@ -56,7 +57,10 @@ class _MyAppState extends State<MyApp> {
     time.value += 1;
     if (time.value % 120 == 0) {
       var v = 0;
-      
+      while (v < items['ancientEgypt']!.length) {
+        
+        v++;
+      }
     }
   }
 
