@@ -49,13 +49,16 @@ class _HomePageState extends State<HomePage> {
               onTap: () => CupertinoScaffold.showCupertinoModalBottomSheet(
                 context: context,
                 builder: (context) => UpgradePage(
-                  totalTime: items['ancientEgypt']![index]['initialTime'],
+                  totalTime: items['ancientEgypt']![index]
+                          ['initialTimeInSeconds'] *
+                      120,
                   item: index,
                   timePeriod: 'ancientEgypt',
                 ),
               ),
               child: ItemWidget(
-                totalTime: items['ancientEgypt']![index]['initialTime'],
+                totalTime:
+                    items['ancientEgypt']![index]['initialTimeInSeconds'] * 120,
                 item: index,
                 timePeriod: 'ancientEgypt',
               ),

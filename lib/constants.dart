@@ -32,9 +32,9 @@ Map<String, List<Map<String, dynamic>>> items = {
     {
       'name': 'Hieroglyphic Tablets',
       'initialTime': 72,
-      'initialTimeInSeconds': 0.6,
-      'initialPrice': 3.738,
-      'coefficient': 1.07,
+      'initialTimeInSeconds': 6,
+      'initialPrice': 720,
+      'coefficient': 1.14,
       'initialRevenue': 1,
       'upgradeLevel': 0,
       'description': 'Hieroglyphic tablets were inscribed with intricate pictorial writing, telling stories and conveying important information in ancient Egypt.',
