@@ -66,15 +66,17 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      backgroundColor:
-          context.isDarkMode ? CupertinoColors.black : CupertinoColors.white,
-      navigationBar: CupertinoNavigationBar(
-          middle: ValueListenableBuilder<int>(
-              valueListenable: time,
-              builder: (BuildContext context, int value, Widget? child) {
-                return Text('\$${money.value.toStringAsFixed(2)}');
-              })),
-      child: SingleChildScrollView(child: Column)
-    );
+        backgroundColor:
+            context.isDarkMode ? CupertinoColors.black : CupertinoColors.white,
+        navigationBar: CupertinoNavigationBar(
+            middle: ValueListenableBuilder<int>(
+                valueListenable: time,
+                builder: (BuildContext context, int value, Widget? child) {
+                  return Text('\$${money.value.toStringAsFixed(2)}');
+                })),
+        child: SingleChildScrollView(
+            child: Column(
+          children: listItems,
+        )));
   }
 }
