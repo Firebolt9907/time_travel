@@ -7,7 +7,6 @@ Map<String, List<Map<String, dynamic>>> items = {
     },
     {
       'name': 'Ancient Sand',
-      'initialTime': 72,
       'initialTimeInSeconds': 0.6,
       'initialPrice': 3.738,
       'coefficient': 1.07,
@@ -19,7 +18,6 @@ Map<String, List<Map<String, dynamic>>> items = {
     },
     {
       'name': 'Canopic Jars',
-      'initialTime': 360,
       'initialTimeInSeconds': 3,
       'initialPrice': 60,
       'coefficient': 1.15,
@@ -31,11 +29,10 @@ Map<String, List<Map<String, dynamic>>> items = {
     },
     {
       'name': 'Hieroglyphic Tablets',
-      'initialTime': 72,
       'initialTimeInSeconds': 6,
       'initialPrice': 720,
       'coefficient': 1.14,
-      'initialRevenue': 1,
+      'initialRevenue': 540,
       'upgradeLevel': 0,
       'description': 'Hieroglyphic tablets were inscribed with intricate pictorial writing, telling stories and conveying important information in ancient Egypt.',
       'automatic': true,
