@@ -111,6 +111,34 @@ class _ItemWidgetState extends State<ItemWidget> {
                     ));}),
                 ),
               ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 15.0, top: 0),
+                  child:  ValueListenableBuilder<int>(
+                                valueListenable: time,
+                                builder: (BuildContext context, int value,
+                                    Widget? child) {return RichText(
+                    text: TextSpan(
+                      // Note: Styles for TextSpans must be explicitly defined.
+                      // Child text spans will inherit styles from parent
+                      style: TextStyle(
+                        fontSize: 11,
+                        color: context.isDarkMode ? Colors.white : Colors.black,
+                      ),
+                      children: <TextSpan>[
+                        TextSpan(
+                          text: ,
+                          // textAlign: TextAlign.left,
+                          style: TextStyle(
+                            fontWeight: FontWeight.normal,
+                            fontSize: 20,
+                          ),
+                        ),
+                      ],
+                    ));}),
+                ),
+              ),
               SizedBox(
                 height: 60,
                 width: screenSize.width - 20,
