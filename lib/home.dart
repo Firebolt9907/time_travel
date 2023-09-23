@@ -75,7 +75,10 @@ class _HomePageState extends State<HomePage> {
               builder: (BuildContext context, int value, Widget? child) {
                 return Text('\$${money.value.toStringAsFixed(2)}');
               })),
-      child: ListView(children: listItems),
+      child: ListView(
+        children: listItems,
+        addAutomaticKeepAlives: true,
+      ),
     );
   }
 }
