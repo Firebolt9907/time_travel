@@ -17,17 +17,50 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
   List<Widget> listItems = [];
 
   @override
-  void initState() { 
+  void initState() {
     super.initState();
     addItems();
   }
 
   addItems() {
-
+    var i = 0;
+    while (i < items['ancientEgypt']!.length) {
+      if (i == 0) {
+        listItems.add(Center(
+          child: CupertinoButton(
+              disabledColor: CupertinoColors.activeBlue,
+              color: CupertinoColors.activeBlue,
+              child: Text('Click Me'),
+              onPressed: () {
+                CupertinoScaffold.showCupertinoModalBottomSheet(
+                  context: context,
+                  builder: (context) => SetupPage(),
+                );
+              }),
+        ));
+      } else {
+        listItems.add(Bounceable(
+          onTap: () => CupertinoScaffold.showCupertinoModalBottomSheet(
+            context: context,
+            builder: (context) => UpgradePage(
+              totalTime:
+                  items['ancientEgypt']![i]['initialTimeInSeconds'] * 120,
+              item: i,
+              timePeriod: 'ancientEgypt',
+            ),
+          ),
+          child: ItemWidget(
+            totalTime: items['ancientEgypt']![i]['initialTimeInSeconds'] * 120,
+            item: i,
+            timePeriod: 'ancientEgypt',
+          ),
+        ));
+      }
+      i++;
+    }
   }
 
   @override
@@ -41,44 +74,7 @@ class _HomePageState extends State<HomePage> {
               builder: (BuildContext context, int value, Widget? child) {
                 return Text('\$${money.value.toStringAsFixed(2)}');
               })),
-      child: ListView.builder(
-        itemCount: items['ancientEgypt']!.length,
-        itemBuilder: (context, index) {
-          if (index == 0) {
-            return Center(
-              child: CupertinoButton(
-                  disabledColor: CupertinoColors.activeBlue,
-                  color: CupertinoColors.activeBlue,
-                  child: Text('Click Me'),
-                  onPressed: () {
-                    CupertinoScaffold.showCupertinoModalBottomSheet(
-                      context: context,
-                      builder: (context) => SetupPage(),
-                    );
-                  }),
-            );
-          } else {
-            return Bounceable(
-              onTap: () => CupertinoScaffold.showCupertinoModalBottomSheet(
-                context: context,
-                builder: (context) => UpgradePage(
-                  totalTime: items['ancientEgypt']![index]
-                          ['initialTimeInSeconds'] *
-                      120,
-                  item: index,
-                  timePeriod: 'ancientEgypt',
-                ),
-              ),
-              child: ItemWidget(
-                totalTime:
-                    items['ancientEgypt']![index]['initialTimeInSeconds'] * 120,
-                item: index,
-                timePeriod: 'ancientEgypt',
-              ),
-            );
-          }
-        },
-      ),
+      child: SingleChildScrollView(child: Column)
     );
   }
 }
