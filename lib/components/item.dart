@@ -66,11 +66,11 @@ class _ItemWidgetState extends State<ItemWidget> {
                 alignment: Alignment.centerLeft,
                 child: Padding(
                   padding: const EdgeInsets.only(left: 15.0, top: 0),
-                  child: RichText(
-                    text:  ValueListenableBuilder<int>(
+                  child:  ValueListenableBuilder<int>(
                                 valueListenable: time,
                                 builder: (BuildContext context, int value,
-                                    Widget? child) {TextSpan(
+                                    Widget? child) {return RichText(
+                    text: TextSpan(
                       // Note: Styles for TextSpans must be explicitly defined.
                       // Child text spans will inherit styles from parent
                       style: TextStyle(
@@ -108,8 +108,7 @@ class _ItemWidgetState extends State<ItemWidget> {
                           ),
                         ),
                       ],
-                    );}),
-                  ),
+                    ));}),
                 ),
               ),
               SizedBox(
@@ -164,26 +163,7 @@ class _ItemWidgetState extends State<ItemWidget> {
                                                     widget.totalTime) /
                                                 widget.totalTime,
                                             alignment: Alignment.centerRight,
-                                            child: Padding(
-                                              padding: const EdgeInsets.only(
-                                                  right: 5.0),
-                                              child: Text(
-                                                (((widget.totalTime -
-                                                                        (time.value %
-                                                                            widget.totalTime)) /
-                                                                    12)
-                                                                .round() /
-                                                            10)
-                                                        .toString() +
-                                                    's left',
-                                                maxLines: 1,
-                                                overflow: TextOverflow.clip,
-                                                textAlign: TextAlign.end,
-                                                style: TextStyle(
-                                                  color: Colors.black,
-                                                ),
-                                              ),
-                                            ),
+                                            
                                           )),
                                     ],
                                   );
