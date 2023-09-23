@@ -74,7 +74,6 @@ class _ItemWidgetState extends State<ItemWidget> {
                                 valueListenable: time,
                                 builder: (BuildContext context, int value,
                                     Widget? child) {
-
                                   //adding money
                                   if ((time.value +
                                               items[widget.timePeriod]![
@@ -86,7 +85,6 @@ class _ItemWidgetState extends State<ItemWidget> {
                                         items[widget.timePeriod]![widget.item]
                                             ['upgradeLevel']);
                                   }
-  
 
                                   return Container(
                                     color: CupertinoColors.activeBlue,
@@ -129,40 +127,44 @@ class _ItemWidgetState extends State<ItemWidget> {
               ValueListenableBuilder<int>(
                   valueListenable: time,
                   builder: (BuildContext context, int value, Widget? child) {
-                    return CupertinoButton(
-                        child: Text(
-                            'Upgrade x1: \$${(items[widget.timePeriod]![widget.item]['initialPrice'] * (pow(items[widget.timePeriod]![widget.item]['coefficient'], items[widget.timePeriod]![widget.item]['upgradeLevel']))).toStringAsFixed(2)}'),
-                        color: items[widget.timePeriod]![widget.item]
+                    return SizedBox(
+                      height: 60,
+                width: screenSize.width - 20,
+                      child: CupertinoButton(
+                          child: Text(
+                              'Upgrade x1: \$${(items[widget.timePeriod]![widget.item]['initialPrice'] * (pow(items[widget.timePeriod]![widget.item]['coefficient'], items[widget.timePeriod]![widget.item]['upgradeLevel']))).toStringAsFixed(2)}'),
+                          color: items[widget.timePeriod]![widget.item]
+                                          ['initialPrice'] *
+                                      (pow(
+                                          items[widget.timePeriod]![widget.item]
+                                              ['coefficient'],
+                                          items[widget.timePeriod]![widget.item]
+                                              ['upgradeLevel'])) <=
+                                  money.value
+                              ? CupertinoColors.activeOrange
+                              : CupertinoColors.inactiveGray,
+                          onPressed: () {
+                            if (items[widget.timePeriod]![widget.item]
                                         ['initialPrice'] *
                                     (pow(
                                         items[widget.timePeriod]![widget.item]
                                             ['coefficient'],
                                         items[widget.timePeriod]![widget.item]
                                             ['upgradeLevel'])) <
-                                money.value
-                            ? CupertinoColors.activeOrange
-                            : CupertinoColors.inactiveGray,
-                        onPressed: () {
-                          if (items[widget.timePeriod]![widget.item]
-                                      ['initialPrice'] *
-                                  (pow(
-                                      items[widget.timePeriod]![widget.item]
-                                          ['coefficient'],
-                                      items[widget.timePeriod]![widget.item]
-                                          ['upgradeLevel'])) <
-                              money.value) {
-                            money.value = money.value -
-                                items[widget.timePeriod]![widget.item]
-                                        ['initialPrice'] *
-                                    (pow(
-                                        items[widget.timePeriod]![widget.item]
-                                            ['coefficient'],
-                                        items[widget.timePeriod]![widget.item]
-                                            ['upgradeLevel']));
-                            items[widget.timePeriod]![widget.item]
-                                ['upgradeLevel'] += 1;
-                          }
-                        });
+                                money.value) {
+                              money.value = money.value -
+                                  items[widget.timePeriod]![widget.item]
+                                          ['initialPrice'] *
+                                      (pow(
+                                          items[widget.timePeriod]![widget.item]
+                                              ['coefficient'],
+                                          items[widget.timePeriod]![widget.item]
+                                              ['upgradeLevel']));
+                              items[widget.timePeriod]![widget.item]
+                                  ['upgradeLevel'] += 1;
+                            }
+                          }),
+                    );
                   }),
             ],
           ),
