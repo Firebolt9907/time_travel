@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
               }),
         ));
       } else {
-        Bounceable(
+        listItems.add(Bounceable(
           onTap: () => CupertinoScaffold.showCupertinoModalBottomSheet(
             context: context,
             builder: (context) => UpgradePage(
@@ -57,10 +57,11 @@ class _HomePageState extends State<HomePage> {
             item: i,
             timePeriod: 'ancientEgypt',
           ),
-        );
+        ));
       }
       i++;
     }
+    setState(() {});
   }
 
   @override
@@ -74,10 +75,7 @@ class _HomePageState extends State<HomePage> {
               builder: (BuildContext context, int value, Widget? child) {
                 return Text('\$${money.value.toStringAsFixed(2)}');
               })),
-      child: ListView.builder(
-        itemCount: items['ancientEgypt']!.length,
-        itemBuilder: (context, index) {},
-      ),
+      child: ListView(children: listItems),
     );
   }
 }
