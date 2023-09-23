@@ -83,11 +83,11 @@ class _ItemWidgetState extends State<ItemWidget> {
                                   }
                                   // print(time.value % widget.totalTime);
                                   return AnimatedSize(
-                                      duration: Duration(milliseconds: 100),
+                                      duration: Duration(milliseconds: 0),
                                       child: Container(
                                         color: CupertinoColors.activeBlue,
                                         height: 40,
-                                        width: (time.value % widget.totalTime) < 12 &&(MediaQuery.of(context)
+                                        width: (MediaQuery.of(context)
                                                     .size
                                                     .width -
                                                 60) *
