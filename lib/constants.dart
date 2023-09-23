@@ -40,9 +40,8 @@ Map<String, List<Map<String, dynamic>>> items = {
     },
     {
       'name': 'Sacred Oils',
-      'initialTime': 72,
-      'initialTimeInSeconds': 0.6,
-      'initialPrice': 3.738,
+      'initialTimeInSeconds': 12,
+      'initialPrice': 8640,
       'coefficient': 1.07,
       'initialRevenue': 1,
       'upgradeLevel': 1,
@@ -52,8 +51,7 @@ Map<String, List<Map<String, dynamic>>> items = {
     },
     {
       'name': 'Papyrus Scrolls',
-      'initialTime': 72,
-      'initialTimeInSeconds': 0.6,
+      'initialTimeInSeconds': 24,
       'initialPrice': 3.738,
       'coefficient': 1.07,
       'initialRevenue': 1,
@@ -64,8 +62,7 @@ Map<String, List<Map<String, dynamic>>> items = {
     },
     {
       'name': 'Scarab Amulets',
-      'initialTime': 72,
-      'initialTimeInSeconds': 0.6,
+      'initialTimeInSeconds': 96,
       'initialPrice': 3.738,
       'coefficient': 1.07,
       'initialRevenue': 1,
@@ -76,8 +73,7 @@ Map<String, List<Map<String, dynamic>>> items = {
     },
     {
       'name': "Pharoah's Treasures",
-      'initialTime': 72,
-      'initialTimeInSeconds': 0.6,
+      'initialTimeInSeconds': 384,
       'initialPrice': 3.738,
       'coefficient': 1.07,
       'initialRevenue': 1,
@@ -88,8 +84,7 @@ Map<String, List<Map<String, dynamic>>> items = {
     },
     {
       'name': 'da piyramids',
-      'initialTime': 72,
-      'initialTimeInSeconds': 0.6,
+      'initialTimeInSeconds': 1536,
       'initialPrice': 3.738,
       'coefficient': 1.07,
       'initialRevenue': 1,
