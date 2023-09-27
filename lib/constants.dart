@@ -15,6 +15,9 @@ Map<String, List<Map<String, dynamic>>> items = {
       'description': 'You know what sand is...',
       'automatic': true,
       'offset': 0,
+      'totalEarned': 0,
+      'timesEarned': 0,
+      'purchaseTime': 0,
     },
     {
       'name': 'Canopic Jars',
@@ -27,6 +30,9 @@ Map<String, List<Map<String, dynamic>>> items = {
           'Canopic jars were used in ancient Egypt to hold the preserved organs of mummies. They were often adorned with depictions of the four sons of Horus.',
       'automatic': true,
       'offset': 0,
+      'totalEarned': 0,
+      'timesEarned': 0,
+      'purchaseTime': 0,
     },
     {
       'name': 'Hieroglyphic Tablets',
@@ -39,6 +45,9 @@ Map<String, List<Map<String, dynamic>>> items = {
           'Hieroglyphic tablets were inscribed with intricate pictorial writing, telling stories and conveying important information in ancient Egypt.',
       'automatic': true,
       'offset': 0,
+      'totalEarned': 0,
+      'timesEarned': 0,
+      'purchaseTime': 0,
     },
     {
       'name': 'Sacred Oils',
@@ -51,6 +60,9 @@ Map<String, List<Map<String, dynamic>>> items = {
           'Ancient Egyptians used various oils and incense for religious rituals and healing purposes. They were often derived from rare herbs and plants.',
       'automatic': true,
       'offset': 0,
+      'totalEarned': 0,
+      'timesEarned': 0,
+      'purchaseTime': 0,
     },
     {
       'name': 'Papyrus Scrolls',
@@ -63,6 +75,9 @@ Map<String, List<Map<String, dynamic>>> items = {
           'Papyrus scrolls were ancient Egyptian documents made from the papyrus plant. They contained a wide range of knowledge, including religious texts, historical records, and medical treatises.',
       'automatic': true,
       'offset': 0,
+      'totalEarned': 0,
+      'timesEarned': 0,
+      'purchaseTime': 0,
     },
     {
       'name': 'Scarab Amulets',
@@ -75,6 +90,9 @@ Map<String, List<Map<String, dynamic>>> items = {
           'Scarab amulets were small, beetle-shaped artifacts made from various materials such as stone, faience, or precious metals. They were believed to bring protection, good luck, and ward off evil spirits in ancient Egypt.',
       'automatic': true,
       'offset': 0,
+      'totalEarned': 0,
+      'timesEarned': 0,
+      'purchaseTime': 0,
     },
     {
       'name': "Pharoah's Treasures",
@@ -87,6 +105,9 @@ Map<String, List<Map<String, dynamic>>> items = {
           "Pharaoh's treasures refer to the priceless artifacts, jewelry, and royal relics found in the tombs of Egyptian pharaohs, such as Tutankhamun's tomb.",
       'automatic': true,
       'offset': 0,
+      'totalEarned': 0,
+      'timesEarned': 0,
+      'purchaseTime': 0,
     },
     {
       'name': 'da piyramids',
@@ -98,6 +119,9 @@ Map<String, List<Map<String, dynamic>>> items = {
       'description': 'da scrumdiddliumptious piyramids of egipt',
       'automatic': true,
       'offset': 0,
+      'totalEarned': 0,
+      'timesEarned': 0,
+      'purchaseTime': 0,
     },
   ]
 };

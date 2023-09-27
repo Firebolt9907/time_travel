@@ -35,6 +35,7 @@ class MyApp extends StatefulWidget {
 }
 
 ValueNotifier<double> money = ValueNotifier<double>(0);
+ValueNotifier<double> totalMoney = ValueNotifier<double>(0);
 ValueNotifier<int> time =
     ValueNotifier<int>(0); //measured in frames NOT SECONDS OR MS
 
@@ -45,7 +46,7 @@ class _MyAppState extends State<MyApp> {
 
   @override
   void initState() {
-    time.value = (DateTime.now().millisecondsSinceEpoch ~/ 1000) * 60;
+    time.value = (DateTime.now().millisecondsSinceEpoch ~/ 1000) * 120;
     print('time: ' + time.value.toString());
     // TODO: implement initState
     timer =
@@ -58,7 +59,6 @@ class _MyAppState extends State<MyApp> {
     if (time.value % 120 == 0) {
       var v = 0;
       while (v < items['ancientEgypt']!.length) {
-        
         v++;
       }
     }
