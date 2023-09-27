@@ -205,8 +205,8 @@ class _ItemWidgetState extends State<ItemWidget> {
                                                     .item]['totalEarned'] +=
                                                 items[widget.timePeriod]![widget
                                                     .item]['initialRevenue'];
-                                                    items[widget.timePeriod]![widget
-                                                    .item]['timesEarned'] +=
+                                            items[widget.timePeriod]![widget
+                                                .item]['timesEarned']++;
                                           }
 
                                           return Row(
