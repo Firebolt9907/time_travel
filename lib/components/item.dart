@@ -222,7 +222,7 @@ class _ItemWidgetState extends State<ItemWidget> {
                                                                     context)
                                                                 .size
                                                                 .width -
-                                                            60) *
+                                                            60) * 
                                                         (time.value %
                                                             widget.totalTime) /
                                                         widget.totalTime,
